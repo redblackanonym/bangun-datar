@@ -1,3 +1,7 @@
+import 'package:bangun_datar_kelas_c/page/lingkaran_page.dart';
+import 'package:bangun_datar_kelas_c/page/persegi_page.dart';
+import 'package:bangun_datar_kelas_c/page/persegipanjang_page.dart';
+import 'package:bangun_datar_kelas_c/page/segitiga_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,15 +24,27 @@ class HomePage extends StatelessWidget {
               child: Row(
             children: [
               Expanded(
-                child: CustomMenu(
-                  title: "Persegi",
-                  imageAsset: "assets/Persegi.png",
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => PersegiPage()));
+                  },
+                  child: CustomMenu(
+                    title: "Persegi",
+                    imageAsset: "assets/Persegi.png",
+                  ),
                 ),
               ),
               Expanded(
-                child: CustomMenu(
-                  title: "Persegi Panjang",
-                  imageAsset: "assets/Persegi Panjang.png",
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => PersegiPanjangPage()));
+                  },
+                  child: CustomMenu(
+                    title: "Persegi Panjang",
+                    imageAsset: "assets/Persegi Panjang.png",
+                  ),
                 ),
               ),
             ],
@@ -37,15 +53,27 @@ class HomePage extends StatelessWidget {
               child: Row(
             children: [
               Expanded(
-                child: CustomMenu(
-                  title: "Segitiga",
-                  imageAsset: "assets/Segitiga.png",
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SegitigaPage()));
+                  },
+                  child: CustomMenu(
+                    title: "Segitiga",
+                    imageAsset: "assets/Segitiga.png",
+                  ),
                 ),
               ),
               Expanded(
-                child: CustomMenu(
-                  title: "Lingkaran",
-                  imageAsset: "assets/Lingkaran.png",
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LingkaranPage()));
+                  },
+                  child: CustomMenu(
+                    title: "Lingkaran",
+                    imageAsset: "assets/Lingkaran.png",
+                  ),
                 ),
               ),
             ],
@@ -92,6 +120,3 @@ class CustomMenu extends StatelessWidget {
         ));
   }
 }
-
-
-
