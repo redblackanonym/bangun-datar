@@ -23,7 +23,7 @@ class SegitigaPage extends StatelessWidget {
           Center(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Segitiga"),
+              child: Text("Segitiga Sama Kaki"),
             ),
           ),
           Container(
